@@ -17,9 +17,9 @@ const HoFollow = () => {
     <Container>
       <HoFollowBox>
         <Title>Who to follow</Title>
-        {dataUser.map((user) => {
+        {dataUser.map((user, index) => {
           return (
-            <Div>
+            <Div key={index}>
               <UserImg src={user.userImg} />
               <div style={{ width: '150px' }}>
                 <User>{user.user}</User>
@@ -28,7 +28,9 @@ const HoFollow = () => {
               <Button>Follow</Button>
             </Div>
           )
+
         })}
+        
         <Span>Show More</Span>
       </HoFollowBox>
     </Container>

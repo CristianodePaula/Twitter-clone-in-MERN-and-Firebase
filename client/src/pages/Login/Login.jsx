@@ -16,10 +16,10 @@ import Google from "../../img/google.png"
 import Facebook from "../../img/facebook.png"
 import axios from 'axios'
 import { useDispatch } from "react-redux"
-import { 
-  loginStart, 
-  loginSuccess, 
-  loginFailure 
+import {
+  loginStart,
+  loginSuccess,
+  loginFailure
 } from "../../redux/userSlice"
 import { useNavigate } from "react-router-dom"
 

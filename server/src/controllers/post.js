@@ -1,4 +1,4 @@
-import Post from '../model/Post.js'
+import Post from '../models/Post.js'
 
 export const createPost = async (req, res, next) => {
   try {
@@ -10,7 +10,7 @@ export const createPost = async (req, res, next) => {
   }
 }
 
-export const readPost = async (req, res, next) => {
+export const readPosts = async (req, res, next) => {
   try {
     const posts = await Post.find()
     res.status(200).json(posts)
@@ -47,5 +47,3 @@ export const deletePost = async (req, res, next) => {
     next(err)
   }
 }
-
-

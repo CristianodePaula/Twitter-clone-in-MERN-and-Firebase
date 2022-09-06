@@ -18,10 +18,13 @@ const Post = ({ post }) => {
         <UserContainer>
           <UserImg src='https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' />
           <Span> <b>Usuário</b> @fulano</Span>
-          <Span>há 2 dias</Span>
+          <Span>{new window.Date(post.createdAt).toLocaleDateString()} </Span>
         </UserContainer>
         <Desc>{post.desc}</Desc>
-        <PostImg src={post.imgUrl} />
+        <PostImg
+          src={post.image}
+          alt=""
+        />
       </Wrapper>
       <Line />
     </Container>
@@ -29,3 +32,5 @@ const Post = ({ post }) => {
 }
 
 export default Post
+
+// ? process.env.REACT_APP_PUBLIC_FOLDER + post.image : ""

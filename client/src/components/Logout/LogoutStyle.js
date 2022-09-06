@@ -1,4 +1,3 @@
-
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -18,7 +17,7 @@ export const UserBox = styled.div`
     height: 33.3%;
     cursor: pointer;
     &:hover {
-        background: grey;
+        background: whitesmoke;
     }
 `
 export const UserName = styled.span`
@@ -39,6 +38,6 @@ export const Span = styled.span`
     justify-content: center;
     cursor: pointer;
     &:hover {
-        background: grey;
+        background: whitesmoke;
     }
 `

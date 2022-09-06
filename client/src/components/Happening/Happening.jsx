@@ -13,9 +13,11 @@ const Happening = () => {
         <Container>
             <HappeningBox>
                 <Title>What’s Happening</Title>
-                {dataHappening.map((notice) => {
+                {dataHappening.map((notice, index) => {
                     return (
-                        <HappeningCard notice={notice} />
+                        <div key={index}>
+                            <HappeningCard notice={notice} />
+                        </div>
                     )
                 })}
                 <Span>Show more</Span>
